@@ -17,7 +17,7 @@ while 1:
                     n = int(input("Zadej n: "))
                     k = int(input("Zadej počet prvků: "))
                     j = n - k
-                    print("Kombinace ",k," tic z ",n," prvků je: \n\t", math.factorial(n)/math.factorial(j)/math.factorial(k))
+                    print("\nKombinace ",k," tic z ",n," prvků je: \t", math.factorial(n)/math.factorial(j)/math.factorial(k))
                 elif o == "konec":
                     print("konec")
                 else:
@@ -27,4 +27,4 @@ while 1:
                 input()
     except:
         print("Chyba v zadání operace")
-    input()
+    input("\nPro pokračování stiskni ENTER\n")
