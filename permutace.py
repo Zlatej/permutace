@@ -21,7 +21,7 @@ while 1:
                 elif o == "konec":
                     print("konec")
                 else:
-                    print("Chyba ve zadání operace")
+                    print("Cyba ve zadání operace")
             except:
                 print("Chyba v zadání n nebo k")
                 input()
