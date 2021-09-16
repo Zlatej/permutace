@@ -1,7 +1,7 @@
 import math
 
 while 1:
-    print("Zvol si operaci\nPro operaci stiskni číslo\n\nPermutace\t1\nVariace\t\t2\nKombinace\t3\n(Pro ukončení napiš: konec)\n")
+    print("Zvol si operaci\nPro operaci stiskni číslo:\n\nPermutace\t1\nVariace\t\t2\nKombinace\t3\n") #Pro ukončení napiš: konec\n
     try:
             o = int(input("Číslo operace: "))
             try:
@@ -18,10 +18,11 @@ while 1:
                     k = int(input("Zadej počet prvků: "))
                     j = n - k
                     print("\nKombinace ",k," tic z ",n," prvků je: \t", math.factorial(n)/math.factorial(j)/math.factorial(k))
-                elif o == "konec":
-                    print("konec")
+                #elif o == "konec":
+                    #print("konec")
+                    #break
                 else:
-                    print("Chyba ve zadání operace")
+                    print("Cyba ve zadání operace")
             except:
                 print("Chyba v zadání n nebo k")
                 input()
