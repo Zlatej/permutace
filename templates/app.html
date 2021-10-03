@@ -8,13 +8,13 @@
         <title>Kombinatorika</title>
 
         <style>
-          .alert{
-            background-color: green;
-            padding: 1rem;
-            border-radius: 5px;
-            color: white;
-            margin: 1rem;
-          }
+            .alert {
+                background-color: green;
+                padding: 1rem;
+                border-radius: 5px;
+                color: white;
+                margin: 1rem;
+            }
         </style>
     </head>
     <body>
@@ -24,35 +24,26 @@
         <!-- Form -->
         <div class="container">
             <form action="/send" method="POST">
-              <label for="Number One">First Number</label>
-              <input
-                type="text"
-                placeholder="First Number"
-                class="u-full-width"
-                name="num1"
-              />
-      
-              <label for="Number Two">Second Number</label>
-              <input
-                type="text"
-                placeholder="Second Number"
-                class="u-full-width"
-                name="num2"
-              />
-      
-              <label for="Operation">Operation</label>
-              <select class="u-full-width" name="operation">
-                <option value="add">Add</option>
-                <option value="subtract">Subtract</option>
-                <option value="multiply">Multiply</option>
-                <option value="divide">Divide</option>
-              </select>
-      
-              <input type="submit" value="Calculate" id="calc_btn" />
+                <label for="Operation">Operace</label>
+                <select class="u-full-width" name="operation">
+                    <option value="pormutace">Permutace</option>
+                    <option value="variace">Variace</option>
+                    <option value="multiply">Kombinace</option>
+                    <option value="permutacesop">Permutace s opakováním</option>
+                    <option value="variacesop">Variace s opakováním</option>
+                    <option value="kombinacesop">Kombinace s opakováním</option>
+                </select>
 
+                <label for="Zadej n">Zadej "n"</label>
+                <input type="text" placeholder="n" class="u-full-width" name="n" />
 
-              <div class="alert">
-                {{ sum }}
-              </div>
+                <label for="Zadej k">Zadej "k"</label>
+                <input type="text" placeholder="k" class="u-full-width" name="k" />
+
+                <input type="submit" value="Vypočítej" id="calc_btn" />
+
+                <div class="alert">{{ sum }}</div>
+            </form>
+        </div>
     </body>
 </html>
