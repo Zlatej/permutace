@@ -1,4 +1,15 @@
 import math
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/homw")
+def home():
+    return"Hello World <h1>Hello<h1>"
+
+if __name__ == "__main__":
+    app.run()
+
 
 while 1:
     print("Zvol si operaci\nPro operaci stiskni číslo:\n\nPermutace\t\t1\nVariace\t\t\t2\nKombinace\t\t3\nSvetry ve výloze\t4\nVariace s opakováním\t5\n") #Pro ukončení napiš: konec\n
