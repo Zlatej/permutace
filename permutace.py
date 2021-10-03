@@ -7,7 +7,7 @@ while 1:
             try:
                 if o == 1:                             
                     n = int(input("Zadej n: "))
-                    print(math.factorial(n))
+                    print("\nVýsledek je: \t", math.factorial(n))
                 elif o == 2:
                     n = int(input("Zadej n: "))
                     k = int(input("Zadej počet prvků: "))
@@ -35,9 +35,9 @@ while 1:
                     n = int(input("Zadej n: "))
                     k = int(input("Zadej počet prvků: "))
                     print("\nVýsledek je: \t", n ** k)
-                #elif o == "konec":
-                    #print("konec")
-                    #break
+                elif o == "konec":
+                    print("konec")
+                    break
                 else:
                     print("Cyba ve zadání operace")
             except:
