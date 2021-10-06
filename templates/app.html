@@ -26,17 +26,34 @@
         <div class="container">
             <form action="/send" method="POST">
                 <label for="Number One">First Number</label>
-                <input type="text" placeholder="First Number" class="u-full-width" name="num1" />
+                <input type="text" placeholder="First Number" class="u-full-width" name="n" />
 
                 <label for="Number Two">Second Number</label>
-                <input type="text" placeholder="Second Number" class="u-full-width" name="num2" />
+                <input type="text" placeholder="Second Number" class="u-full-width" name="k" />
+                <!--
+                <label for="Zadej r1">Zadej "r1"</label>
+                <input type="text" placeholder="r1" class="u-full-width" name="r1 />
 
-                <label for="Operation">Operation</label>
-                <select class="u-full-width" name="operation">
-                    <option value="add">Add</option>
-                    <option value="subtract">Subtract</option>
-                    <option value="multiply">Multiply</option>
-                    <option value="divide">Divide</option>
+                <label for="Zadej r2">Zadej "r2"</label>
+                <input type="text" placeholder="r2" class="u-full-width" name="r2" />
+
+                <label for="Zadej r3">Zadej "r3"</label>
+                <input type="text" placeholder="r3" class="u-full-width" name="r3" />
+
+                <label for="Zadej r4">Zadej "r4"</label>
+                <input type="text" placeholder="r4" class="u-full-width" name="r4" />
+
+                <label for="Zadej r5">Zadej "r5"</label>
+                <input type="text" placeholder="r5" class="u-full-width" name="r5" />
+                -->
+                <label for="Operace">Operace</label>
+                <select class="u-full-width" name="operace">
+                    <option value="permutace">Permutace</option>
+                    <option value="variace">Variace</option>
+                    <option value="kombinace">Kombinace</option>
+                    <option value="permutacesop">Permutace s opakováním</option>
+                    <option value="variacesop">Variace s opakováním</option>
+                    <option value="kombinacesop">Kombinace s opakováním</option>
                 </select>
 
                 <input type="submit" value="Calculate" id="calc_btn" />
@@ -46,7 +63,6 @@
         </div>
     </body>
 </html>
-
 <!--
     <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,4 @@
+import math
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -11,25 +12,40 @@ def main():
 @app.route('/send', methods=['POST'])
 def send(sum=sum):
     if request.method == 'POST':
-        num1 = request.form['num1']
-        num2 = request.form['num2']
-        operation = request.form['operation']
+        n = int(request.form['n'])
+        k = int(request.form['k'])
+        #r1 = int(request.form['r1'])
+        #r2 = int(request.form['r2'])
+        #r3 = int(request.form['r3'])
+        #r4 = int(request.form['r4'])
+        #r5 = int(request.form['r5'])
+        operace = request.form['operace']
 
-        if operation == 'add':
-            sum = float(num1) + float(num2)
+        if operace == 'permutace':
+            sum = float(math.factorial(n))
             return render_template('app.html', sum=sum)
 
-        elif operation == 'subtract':
-            sum = float(num1) - float(num2)
+        elif operace == 'variace':
+            sum = float(math.factorial(n)/math.factorial(n-k))
             return render_template('app.html', sum=sum)
 
-        elif operation == 'multiply':
-            sum = float(num1) * float(num2)
+        #elif operace == 'kombinace':
+        #    sum = float(math.factorial(n)/math.factorial(r1)/math.factorial(r2)/math.factorial(r3)/math.factorial(r4)/math.factorial(r5))
+        #    return render_template('app.html', sum=sum)
+
+        elif operace == 'permutacesop':
+            sum = float(n ** k)
             return render_template('app.html', sum=sum)
 
-        elif operation == 'divide':
-            sum = float(num1) / float(num2)
+        elif operace == 'variacesop':
+            sum = float(n) + float(k)
             return render_template('app.html', sum=sum)
+
+        elif operace == 'kombinacesop':
+            sum = float(n) + float(k)
+            return render_template('app.html', sum=sum)
+
+
         else:
             return render_template('app.html')
 
