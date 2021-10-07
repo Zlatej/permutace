@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Calculator</title>
+        <title>Kombinatorika</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
 
         <style>
@@ -19,18 +19,32 @@
     </head>
     <body>
         <div class="container">
-            <h3>Calculator App</h3>
+            <h1>Kombinatorika</h1>
         </div>
 
         <!-- Form -->
-        <div class="container">
-            <form action="/send" method="POST">
-                <label for="Number One">First Number</label>
-                <input type="text" placeholder="First Number" class="u-full-width" name="n" />
 
-                <label for="Number Two">Second Number</label>
-                <input type="text" placeholder="Second Number" class="u-full-width" name="k" />
-                <!--
+            <form action="/send" method="POST">
+                <div class="alert">{{ sum }}</div>
+
+                <div class="container">
+                    <label for="Operace">Operace</label>
+                    <select class="u-full-width" name="operace">
+                        <option value="permutace">Permutace</option>
+                        <option value="variace">Variace</option>
+                        <option value="kombinace">Kombinace</option>
+                        <option value="permutacesop">Permutace s opakováním</option>
+                        <option value="variacesop">Variace s opakováním</option>
+                        <option value="kombinacesop">Kombinace s opakováním</option>
+                    </select>
+
+                    
+                <label for="n">n</label>
+                <input type="text" placeholder="n" class="u-full-width" name="n" />
+
+                <label for="k">k</label>
+                <input type="text" placeholder="k" class="u-full-width" name="k" />
+                
                 <label for="Zadej r1">Zadej "r1"</label>
                 <input type="text" placeholder="r1" class="u-full-width" name="r1 />
 
@@ -45,17 +59,7 @@
 
                 <label for="Zadej r5">Zadej "r5"</label>
                 <input type="text" placeholder="r5" class="u-full-width" name="r5" />
-                -->
-                <label for="Operace">Operace</label>
-                <select class="u-full-width" name="operace">
-                    <option value="permutace">Permutace</option>
-                    <option value="variace">Variace</option>
-                    <option value="kombinace">Kombinace</option>
-                    <option value="permutacesop">Permutace s opakováním</option>
-                    <option value="variacesop">Variace s opakováním</option>
-                    <option value="kombinacesop">Kombinace s opakováním</option>
-                </select>
-
+                
                 <input type="submit" value="Calculate" id="calc_btn" />
                 <br />
                 <div class="alert">{{ sum }}</div>
@@ -63,69 +67,3 @@
         </div>
     </body>
 </html>
-<!--
-    <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
-        <title>Kombinatorika</title>
-
-        <style>
-            .alert {
-                background-color: green;
-                padding: 1rem;
-                border-radius: 5px;
-                color: white;
-                margin: 1rem;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <h3>Kombinatorika</h3>
-        </div>
-
-        <div class="container">
-            <form action="/send" method="POST">
-                <label for="Operation">Operace</label>
-                <select class="u-full-width" name="operation">
-                    <option value="permutace">Permutace</option>
-                    <option value="variace">Variace</option>
-                    <option value="Kombinace">Kombinace</option>
-                    <option value="permutacesop">Permutace s opakováním</option>
-                    <option value="variacesop">Variace s opakováním</option>
-                    <option value="kombinacesop">Kombinace s opakováním</option>
-                </select>
-
-                <label for="Zadej n">Zadej "n"</label>
-                <input type="text" placeholder="n" class="u-full-width" name="n" />
-
-                <label for="Zadej k">Zadej "k" (Nezadávat v případě permuatací)</label>
-                <input type="text" placeholder="k (Nezadávat v případě permuatací)" class="u-full-width" name="k" />
-
-                <label for="Zadej r1">Zadej "r1"</label>
-                <input type="text" placeholder="r1" class="u-full-width" name="r1 />
-
-                <label for="Zadej r2">Zadej "r2"</label>
-                <input type="text" placeholder="r2" class="u-full-width" name="r2" />
-
-                <label for="Zadej r3">Zadej "r3"</label>
-                <input type="text" placeholder="r3" class="u-full-width" name="r3" />
-
-                <label for="Zadej r4">Zadej "r4"</label>
-                <input type="text" placeholder="r4" class="u-full-width" name="r4" />
-
-                <label for="Zadej r5">Zadej "r5"</label>
-                <input type="text" placeholder="r5" class="u-full-width" name="r5" />
-
-                <input type="submit" value="Vypočítej" id="calc_btn" />
-
-                <div class="alert">{{ sum }}</div>
-            </form>
-        </div>
-    </body>
-</html>
--->
